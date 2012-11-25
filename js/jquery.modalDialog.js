@@ -49,10 +49,7 @@
             $DOMWindow.css('left',Math.round(shortcut.viewPortWidth()/2) + shortcut.scrollOffsetWidth() - Math.round(($DOMWindow.outerWidth())/2));
         }else{
             $DOMWindow.css('left',Math.round(shortcut.viewPortWidth()/2) + shortcut.scrollOffsetWidth() - Math.round(($DOMWindow.outerWidth())/2));
-            //$DOMWindow.css('top',Math.round(shortcut.viewPortHeight()/2) + shortcut.scrollOffsetHeight() - Math.round(($DOMWindow.outerHeight())/2));
-        }
-        if(windowHeight + 50 > shortcut.viewPortHeight()){//added 50 to be safe
-            $DOMWindow.css('top', (fixedWindowY + shortcut.scrollOffsetHeight()) + 'px');
+            $DOMWindow.css('top',Math.round(shortcut.viewPortHeight()/2) + shortcut.scrollOffsetHeight() - Math.round(($DOMWindow.outerHeight())/2));
         }
 
         //URL読み込み
