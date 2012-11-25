@@ -30,9 +30,25 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>モーダルダイアログを作成する為の壊してよいオモチャ（Breakable Toys）</h3>
-      </section>
+        <section id="main_content" class="inner">
+            <h3>モーダルダイアログを作成する為の壊してよいオモチャ（Breakable Toys）</h3>
+        </section>
+        
+        
+        <section class="inner">
+            <p>
+                demoを押下すると、ajaxでdocumentを取得してモーダルダイアログ表示する。
+            </p>
+            <p>
+                jquery.DOMWindow.jsを参考にIE6関連のソースを抜いて設定等もインラインで調整。
+            </p>
+            <p>
+                モーダルダイアログを作成する為の壊してよいオモチャ（Breakable Toys）
+            </p>
+            <div id="content">
+                <button id="btnDemo">demo</button>
+            </div>
+        </section>
     </div>
 
     <!-- FOOTER  -->
@@ -44,6 +60,17 @@
     </div>
 
     
-
+    
+    <script src="https://raw.github.com/mitsugeek/modalDialog/master/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="https://raw.github.com/mitsugeek/modalDialog/master/js/jquery.modalDialog.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function(){
+            $(document).on("click","#btnDemo",function(){
+                $.modalDialog("ajax.html");
+            });
+        }());
+      
+    </script>
+      
   </body>
 </html>
