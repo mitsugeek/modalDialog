@@ -52,7 +52,7 @@
             //$DOMWindow.css('top',Math.round(shortcut.viewPortHeight()/2) + shortcut.scrollOffsetHeight() - Math.round(($DOMWindow.outerHeight())/2));
         }
         if(windowHeight + 50 > shortcut.viewPortHeight()){//added 50 to be safe
-            //$DOMWindow.css('top', (fixedWindowY + shortcut.scrollOffsetHeight()) + 'px');
+            $DOMWindow.css('top', (fixedWindowY + shortcut.scrollOffsetHeight()) + 'px');
         }
 
         //URL読み込み
