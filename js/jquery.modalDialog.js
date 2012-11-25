@@ -45,12 +45,9 @@
         var $DOMWindow = $('#DOMWindow');
         
         //ダイアログのwindowサイズ調整(調整)
-        if(windowHeight + 50 > shortcut.viewPortHeight()){//added 50 to be safe
-            $DOMWindow.css('left',Math.round(shortcut.viewPortWidth()/2) + shortcut.scrollOffsetWidth() - Math.round(($DOMWindow.outerWidth())/2));
-        }else{
-            $DOMWindow.css('left',Math.round(shortcut.viewPortWidth()/2) + shortcut.scrollOffsetWidth() - Math.round(($DOMWindow.outerWidth())/2));
-            $DOMWindow.css('top',Math.round(shortcut.viewPortHeight()/2) + shortcut.scrollOffsetHeight() - Math.round(($DOMWindow.outerHeight())/2));
-        }
+        $DOMWindow.css('left',Math.round(shortcut.viewPortWidth()/2) + shortcut.scrollOffsetWidth() - Math.round(($DOMWindow.outerWidth())/2));
+        $DOMWindow.css('top',Math.round(shortcut.viewPortHeight()/2) + shortcut.scrollOffsetHeight() - Math.round(($DOMWindow.outerHeight())/2));
+       
 
         //URL読み込み
         if(windowSourceURL.indexOf("?") == -1){ //no query string, so add one
